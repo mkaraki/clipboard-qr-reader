@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard QR read</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Clipboard QR Reader</h1>
+    </header>
+
+    <section id="readImgContainer">
+        <canvas id="readImg" width="0" height="0"></canvas>
+        <br />
+        <button onclick="forceReadFromClipboard()">Read image from clipboard</button>
+    </section>
+
+    <section>
+        <h2 id="readState">Read result</h2>
+        <div class="secint sysMsg" id="data">
+            No data.<br />
+            Use <code>Ctrl</code> + <code>v</code> to paste image and read data.
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
